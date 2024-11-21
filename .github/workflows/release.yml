@@ -18,6 +18,11 @@ jobs:
         with:
           path: 'Flow.Launcher.Plugin.FlowTamer\\plugin.json'
           prop_path: 'Version'
+      - name: 'Build'
+        run: |
+          dotnet publish 'Flow.Launcher.Plugin.FlowTamer\\Flow.Launcher.Plugin.FlowTamer.csproj' -r win-x64 -c Release -o "FlowTamer-${{steps.version.outputs.prop}}"
+          7z a -tzip "FlowTamer-${{steps.version.outputs.prop}}.zip" "./FlowTamer-${{steps.version.outputs.prop}}/*"
+          rm -r "FlowTamer-${{steps.version.outputs.prop}}"
       - name: 'Publish'
         uses: softprops/action-gh-release@v2
         if: success()
