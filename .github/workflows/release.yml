@@ -16,7 +16,7 @@ jobs:
         id: version
         uses: notiz-dev/github-action-json-property@release
         with:
-          path: 'Flow.Launcher.Plugin.Flow.Tamer\\plugin.json'
+          path: 'Flow.Launcher.Plugin.FlowTamer\\plugin.json'
           prop_path: 'Version'
       - name: 'Publish'
         uses: softprops/action-gh-release@v2
