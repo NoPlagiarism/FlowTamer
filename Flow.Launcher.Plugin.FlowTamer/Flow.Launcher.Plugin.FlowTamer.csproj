@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0-windows</TargetFramework>
+	<UseWPF>true</UseWPF>
+    <AssemblyName>Flow.Launcher.Plugin.FlowTamer</AssemblyName>
+    <PackageId>Flow.Launcher.Plugin.FlowTamer</PackageId>
+    <Authors>NoPlagiarism</Authors>
+    <PackageProjectUrl>https://github.com/NoPlagiarism/Flow.Launcher.Plugin.FlowTamer</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/NoPlagiarism/Flow.Launcher.Plugin.FlowTamer</RepositoryUrl>
+    <PackageTags>flow-launcher flow-plugin</PackageTags>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>None</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="SettingsView.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="plugin.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+	  <Content Include="Images\*">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Flow.Launcher.Plugin" Version="4.4.0" />
+  </ItemGroup>
+
+</Project>
