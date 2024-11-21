@@ -27,7 +27,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         if: success()
         with:
-          files: 'Flow.Launcher.Plugin.FlowTamer.zip'
+          files: 'FlowTamer-*.zip'
           tag_name: "v${{steps.version.outputs.prop}}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
