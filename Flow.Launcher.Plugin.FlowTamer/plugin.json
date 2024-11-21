@@ -6,7 +6,7 @@
     "Author": "NoPlagiarism",
     "Version": "1.0.0",
     "Language": "csharp",
-    "Website": "https://github.com/NoPlagiarism/Flow.Launcher.Plugin.FlowTamer",
+    "Website": "https://github.com/NoPlagiarism/FlowTamer",
     "IcoPath": "Images/logo.png",
     "ExecuteFileName": "Flow.Launcher.Plugin.FlowTamer.dll"
 }
