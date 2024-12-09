@@ -89,5 +89,14 @@ namespace Flow.Launcher.Plugin.FlowTamer
 
             ShellCommand.Execute(psi);
         }
+
+        public void OpenBT()
+        {
+            ProcessStartInfo psi = new ProcessStartInfo
+            {
+                FileName = this.BTPath
+            };
+            ShellCommand.Execute(psi);
+        }
     }
 }

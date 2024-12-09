@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics.Eventing.Reader;
@@ -37,7 +38,7 @@ namespace Flow.Launcher.Plugin.FlowTamer
 
         public void Open(Query query, bool withPicker)
         {
-            try { BT.Open(query.Search, withPicker); }
+            try { if (!string.IsNullOrEmpty(query.Search)) BT.Open(query.Search, withPicker); else BT.OpenBT(); }
             catch (Win32Exception e)
             {
                 Retry(query, withPicker);
